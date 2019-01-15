@@ -20,7 +20,6 @@ $(document).ready(function() {
 
   function checkEndGame() {
     if (game.isEndGame()) {
-      $("#gameOver").text("Game Over!");
       endStatement();
       $(".board").prop("disabled", true);
     } else {
@@ -30,9 +29,9 @@ $(document).ready(function() {
 
   function endStatement() {
     if (game.checkWinner()) {
-      $("#endStatus").text("Winner: " + game.currentPlayer)
+      $("#endStatus").text("Game Over! Winner: " + game.currentPlayer)
     } else {
-      $("#endStatus").text("Draw!")
+      $("#endStatus").text("Game Over! Is Draw!")
     }
   }
 

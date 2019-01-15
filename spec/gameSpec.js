@@ -27,14 +27,14 @@ describe("Player", function() {
     expect(game.isEndGame()).toEqual(true);
   })
 
-  it ('#.isEndGame return true when .checkWinner has winner', function() {
+  it ('#.isEndGame return true when .checkWin has winner', function() {
     game.placeSpot(2);
     game.placeSpot(5);
     game.placeSpot(8);
     expect(game.isEndGame()).toEqual(true);
   })
 
-  it ('#.isEndGame return false when .checkWinnder has NO winner', function() {
+  it ('#.isEndGame return false when .checkWin has NO winner', function() {
     game.placeSpot(2);
     expect(game.isEndGame()).toEqual(false);
     game.placeSpot(8);
@@ -50,18 +50,18 @@ describe("Player", function() {
     expect(game.currentPlayer).toEqual("O")
   })
 
-  it ('#.checkWinner return winner when winPattern is reached', function() {
+  it ('#.checkWin return true when winPattern is reached', function() {
     game.placeSpot(0);
     game.placeSpot(1);
     game.placeSpot(2);
-    expect(game.checkWinner()).toEqual("O");
+    expect(game.checkWin()).toEqual(true);
   })
 
-  it ('#.checkWinner return winner when winPattern is reached', function() {
+  it ('#.checkWin return true when winPattern is reached', function() {
     game.placeSpot(0);
     game.placeSpot(4);
     game.placeSpot(8);
-    expect(game.checkWinner()).toEqual("O");
+    expect(game.checkWin()).toEqual(true);
   })
 
   // it ('#.updateTurn return Game Over game end', function() {
