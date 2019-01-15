@@ -22,11 +22,16 @@ describe("Player", function() {
   })
 
   it ('#.isEndGame return true when move > 9', function() {
-    console.log(game.numberOfMove);
     for (var i = 0; i <= 9; i ++) {
       game.placeSpot(i)
     }
     expect(game.isEndGame()).toEqual(true);
+  })
+
+  it ('#.switchTurn switch currentPlayer between O and X', function() {
+    expect(game.currentPlayer).toEqual("O")
+    game.switchTurn()
+    expect(game.currentPlayer).toEqual("X");
   })
 
 });
