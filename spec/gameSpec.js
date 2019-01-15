@@ -64,9 +64,9 @@ describe("Player", function() {
     expect(game.checkWinner()).toEqual("O");
   })
 
-  it ('#.updateTurn return Game Over game end', function() {
-    game.numberOfMove = 10
-    expect(game.updateTurn()).toEqual("Game Over");
-  })
+  // it ('#.updateTurn return Game Over game end', function() {
+  //   game.numberOfMove = 10;
+  //   expect(function () { game.updateTurn() }).toThrowError('Game Over')
+  // })
 
 });

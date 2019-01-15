@@ -7,7 +7,7 @@ function Game() {
 }
 
 Game.prototype.placeSpot = function(indexNumber) {
-  this.board[indexNumber] = "O";
+  this.board[indexNumber] = this.currentPlayer;
 };
 
 Game.prototype.isEndGame = function() {
@@ -15,7 +15,7 @@ Game.prototype.isEndGame = function() {
   if (someoneWon)  {
     return true
   } else {
-    return this.numberOfMove > 9 ? true : false
+    return this.numberOfMove >= 8 ? true : false
   }
 };
 
@@ -43,7 +43,7 @@ Game.prototype.checkWinner = function() {
 };
 
 Game.prototype.updateTurn = function() {
-  if (this.isEndGame()) { return "Game Over" }
+  // if (this.isEndGame()) { throw new Error ("Game Over") }
   this.numberOfMove++ ;
   this.switchTurn();
 };

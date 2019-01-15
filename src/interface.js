@@ -3,7 +3,20 @@ $(document).ready(function() {
 
   for (let i = 0; i < 9; i++ ) {
     $("#spot" + i).click(function () {
-      markSpot(i)
+      markSpot(i);
+      disableButton(i);
+      checkEndGame();
     })
   }
+
+  function markSpot(i) {
+    game.placeSpot(i);
+    $("#mark" + i).text(game.currentPlayer)
+  }
+
+  function disableButton(i) {
+    $("#spot" + i).prop('disabled', true);
+  }
+
+
 })
