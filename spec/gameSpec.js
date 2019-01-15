@@ -21,11 +21,26 @@ describe("Player", function() {
     expect(game.numberOfMove).toEqual(1);
   })
 
-  it ('#.isEndGame return true when move > 9', function() {
-    for ( var i = 0; i <= 9; i++ ) {
-      game.placeSpot(i)
-    }
+  // it ('#.isEndGame return true when move > 9', function() {
+  //   for ( var i = 0; i <= 9; i++ ) {
+  //     game.placeSpot(i)
+  //   }
+  //   expect(game.isEndGame()).toEqual(true);
+  // })
+
+  it ('#.isEndGame return true when .checkWinnder has winner', function() {
+    game.placeSpot(2);
+    game.placeSpot(5);
+    game.placeSpot(8);
     expect(game.isEndGame()).toEqual(true);
+  })
+
+  it ('#.isEndGame return false when .checkWinnder has NO winner', function() {
+    game.placeSpot(2);
+    expect(game.isEndGame()).toEqual(false);
+    game.placeSpot(8);
+    game.placeSpot(6);
+    expect(game.isEndGame()).toEqual(false);
   })
 
   it ('#.switchTurn switch currentPlayer between O and X', function() {
@@ -34,18 +49,18 @@ describe("Player", function() {
     expect(game.currentPlayer).toEqual("X");
   })
 
-  it ('#.checkWin return true when winPattern is reached', function() {
+  it ('#.checkWinner return winner when winPattern is reached', function() {
     game.placeSpot(0);
     game.placeSpot(1);
     game.placeSpot(2);
-    expect(game.checkWin()).toEqual(true);
+    expect(game.checkWinner()).toEqual("O");
   })
 
-  it ('#.checkWin return true when winPattern is reached', function() {
+  it ('#.checkWinner return winner when winPattern is reached', function() {
     game.placeSpot(0);
     game.placeSpot(4);
     game.placeSpot(8);
-    expect(game.checkWin()).toEqual(true);
+    expect(game.checkWinner()).toEqual("O");
   })
 
 });

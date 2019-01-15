@@ -12,6 +12,7 @@ Game.prototype.placeSpot = function(indexNumber) {
 };
 
 Game.prototype.isEndGame = function() {
+  return this.checkWinner() === "O" || this.checkWinner() === "X" ? true : false
   return this.numberOfMove > 9 ? true : false
 };
 
@@ -19,7 +20,7 @@ Game.prototype.switchTurn = function () {
   this.currentPlayer === "O" ? this.currentPlayer = "X" : this.currentPlayer = "O";
 }
 
-Game.prototype.checkWin = function() {
+Game.prototype.checkWinner = function() {
   var winPattern = [
     [0, 1, 2],
     [3, 4, 5],
@@ -32,7 +33,9 @@ Game.prototype.checkWin = function() {
   ];
   for ( var i = 0; winPattern[i]; i++ ) {
     var boardPatter = this.board[winPattern[i][0]] + this.board[winPattern[i][1]] + this.board[winPattern[i][2]];
-    if (boardPatter === 'OOO' || boardPatter === 'XXX') { return true }
+    if (boardPatter === "OOO" || boardPatter === "XXX") { 
+      return this.currentPlayer 
+    }
   }
 };
 
