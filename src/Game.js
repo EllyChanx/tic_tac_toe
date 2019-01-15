@@ -11,8 +11,8 @@ Game.prototype.placeSpot = function(indexNumber) {
 };
 
 Game.prototype.isEndGame = function() {
-  const someoneWon = this.checkWinner() === "O" || this.checkWinner() === "X" ? true : false
-  if (someoneWon)  {
+  // const someoneWon = this.checkWinner() === "O" || this.checkWinner() === "X" ? true : false
+  if (this.checkWinner())  {
     return true
   } else {
     return this.numberOfMove >= 8 ? true : false
@@ -37,7 +37,7 @@ Game.prototype.checkWinner = function() {
   for ( var i = 0; winPattern[i]; i++ ) {
     var boardPatter = this.board[winPattern[i][0]] + this.board[winPattern[i][1]] + this.board[winPattern[i][2]];
     if (boardPatter === "OOO" || boardPatter === "XXX") { 
-      return this.currentPlayer 
+      return true 
     }
   }
 };

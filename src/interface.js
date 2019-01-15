@@ -21,9 +21,18 @@ $(document).ready(function() {
   function checkEndGame() {
     if (game.isEndGame()) {
       $("#gameOver").text("Game Over!");
+      endStatement();
       $(".board").prop("disabled", true);
     } else {
       game.updateTurn();
+    }
+  }
+
+  function endStatement() {
+    if (game.checkWinner()) {
+      $("#endStatus").text("Winner: " + game.currentPlayer)
+    } else {
+      $("#endStatus").text("Draw!")
     }
   }
 
