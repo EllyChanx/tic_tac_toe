@@ -8,7 +8,6 @@ function Game() {
 
 Game.prototype.placeSpot = function(indexNumber) {
   this.board[indexNumber] = "O";
-  // this.numberOfMove++ ;
 };
 
 Game.prototype.isEndGame = function() {
