@@ -18,6 +18,7 @@ describe("Player", function() {
   it ('#.numberOfMove start with 0 and += 1 after .placeSpot', function() {
     expect(game.numberOfMove).toEqual(0);
     game.placeSpot(3)
+    game.updateTurn()
     expect(game.numberOfMove).toEqual(1);
   })
 

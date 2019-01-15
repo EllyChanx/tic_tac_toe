@@ -8,7 +8,7 @@ function Game() {
 
 Game.prototype.placeSpot = function(indexNumber) {
   this.board[indexNumber] = "O";
-  this.numberOfMove++ ;
+  // this.numberOfMove++ ;
 };
 
 Game.prototype.isEndGame = function() {
@@ -37,6 +37,12 @@ Game.prototype.checkWinner = function() {
       return this.currentPlayer 
     }
   }
+};
+
+Game.prototype.updateTurn = function() {
+  if (this.isEndGame()) { return "Game Over" }
+  this.numberOfMove++ ;
+  this.switchTurn();
 };
 
 module.exports = Game;
