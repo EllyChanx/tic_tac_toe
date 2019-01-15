@@ -11,7 +11,14 @@ describe("Player", function() {
   })
 
   it ('#.placeSpot change the borad element by index number', function() {
-    expect(game.placeSpot(3)).toEqual([undefined, undefined, undefined, "O", undefined, undefined, undefined, undefined, undefined]);
+    game.placeSpot(3)
+    expect(game.board).toEqual([undefined, undefined, undefined, "O", undefined, undefined, undefined, undefined, undefined]);
+  })
+
+  it ('#.numberOfMove start with 0 and += 1 after .placeSpot', function() {
+    expect(game.numberOfMove).toEqual(0);
+    game.placeSpot(3)
+    expect(game.numberOfMove).toEqual(1);
   })
 
 });
