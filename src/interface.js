@@ -28,11 +28,18 @@ $(document).ready(function() {
   }
 
   function endStatement() {
-    if (game.checkWinner()) {
-      $("#endStatus").text("Game Over! Winner: " + game.currentPlayer)
+    if (game.checkWin()) {
+      $("#endStatus").show().text("Game Over! Winner: " + game.currentPlayer)
     } else {
       $("#endStatus").text("Game Over! Is Draw!")
     }
   }
+
+  $('#reStart').click(function() {
+    game = new Game();
+    $(".board").prop("disabled", false); 
+    $(".mark").empty();
+    $("#endStatus").hide();
+  });
 
 })
