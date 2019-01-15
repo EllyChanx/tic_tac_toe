@@ -15,8 +15,16 @@ $(document).ready(function() {
   }
 
   function disableButton(i) {
-    $("#spot" + i).prop('disabled', true);
+    $("#spot" + i).prop("disabled", true);
   }
 
+  function checkEndGame() {
+    if (game.isEndGame()) {
+      $("#gameOver").text("Game Over!");
+      $(".board").prop("disabled", true);
+    } else {
+      game.updateTurn();
+    }
+  }
 
 })
