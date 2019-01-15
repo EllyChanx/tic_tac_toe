@@ -22,14 +22,12 @@ describe("Player", function() {
     expect(game.numberOfMove).toEqual(1);
   })
 
-  // it ('#.isEndGame return true when move > 9', function() {
-  //   for ( var i = 0; i <= 9; i++ ) {
-  //     game.placeSpot(i)
-  //   }
-  //   expect(game.isEndGame()).toEqual(true);
-  // })
+  it ('#.isEndGame return true when move > 9', function() {
+    game.numberOfMove = 10
+    expect(game.isEndGame()).toEqual(true);
+  })
 
-  it ('#.isEndGame return true when .checkWinnder has winner', function() {
+  it ('#.isEndGame return true when .checkWinner has winner', function() {
     game.placeSpot(2);
     game.placeSpot(5);
     game.placeSpot(8);
@@ -48,6 +46,8 @@ describe("Player", function() {
     expect(game.currentPlayer).toEqual("O")
     game.switchTurn()
     expect(game.currentPlayer).toEqual("X");
+    game.switchTurn()
+    expect(game.currentPlayer).toEqual("O")
   })
 
   it ('#.checkWinner return winner when winPattern is reached', function() {
@@ -62,6 +62,11 @@ describe("Player", function() {
     game.placeSpot(4);
     game.placeSpot(8);
     expect(game.checkWinner()).toEqual("O");
+  })
+
+  it ('#.updateTurn return Game Over game end', function() {
+    game.numberOfMove = 10
+    expect(game.updateTurn()).toEqual("Game Over");
   })
 
 });

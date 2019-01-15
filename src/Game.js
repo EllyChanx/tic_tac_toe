@@ -11,8 +11,12 @@ Game.prototype.placeSpot = function(indexNumber) {
 };
 
 Game.prototype.isEndGame = function() {
-  return this.checkWinner() === "O" || this.checkWinner() === "X" ? true : false
-  return this.numberOfMove > 9 ? true : false
+  const someoneWon = this.checkWinner() === "O" || this.checkWinner() === "X" ? true : false
+  if (someoneWon)  {
+    return true
+  } else {
+    return this.numberOfMove > 9 ? true : false
+  }
 };
 
 Game.prototype.switchTurn = function () {
