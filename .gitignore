@@ -1,0 +1,5 @@
+/.DS_Store
+/node.md
+/node_modules/*
+/coverage
+/app.js
