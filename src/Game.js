@@ -10,4 +10,8 @@ Game.prototype.placeSpot = function(indexNumber) {
   this.numberOfMove ++ ;
 };
 
+Game.prototype.isEndGame = function() {
+  return this.numberOfMove > 9 ? true : false
+};
+
 module.exports = Game;

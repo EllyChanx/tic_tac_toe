@@ -21,4 +21,12 @@ describe("Player", function() {
     expect(game.numberOfMove).toEqual(1);
   })
 
+  it ('#.isEndGame return true when move > 9', function() {
+    console.log(game.numberOfMove);
+    for (var i = 0; i <= 9; i ++) {
+      game.placeSpot(i)
+    }
+    expect(game.isEndGame()).toEqual(true);
+  })
+
 });
