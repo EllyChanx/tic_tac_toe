@@ -3,3 +3,5 @@
 /node_modules/*
 /coverage
 /app.js
+
+/src/index.js
