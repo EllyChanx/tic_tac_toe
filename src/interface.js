@@ -1,3 +1,6 @@
+/* global Game:true */
+/* global game:true */
+
 $(document).ready(function() {
   game = new Game();
 
@@ -6,12 +9,12 @@ $(document).ready(function() {
       markSpot(i);
       disableButton(i);
       checkEndGame();
-    })
+    });
   }
 
   function markSpot(i) {
     game.placeSpot(i);
-    $("#mark" + i).text(game.currentPlayer)
+    $("#mark" + i).text(game.currentPlayer);
   }
 
   function disableButton(i) {
@@ -29,17 +32,17 @@ $(document).ready(function() {
 
   function endStatement() {
     if (game.checkWin()) {
-      $("#endStatus").show().text("Game Over! Winner: " + game.currentPlayer)
+      $("#endStatus").show().text("Game Over! Winner: " + game.currentPlayer);
     } else {
-      $("#endStatus").text("Game Over! Is Draw!")
+      $("#endStatus").text("Game Over! Is Draw!");
     }
   }
 
-  $('#reStart').click(function() {
+  $("#reStart").click(function() {
     game = new Game();
     $(".board").prop("disabled", false); 
     $(".mark").empty();
     $("#endStatus").hide();
   });
 
-})
+});

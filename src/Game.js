@@ -3,7 +3,7 @@
 function Game() {
   this.board = new Array(9);
   this.numberOfMove = 0;
-  this.currentPlayer = "O"
+  this.currentPlayer = "O";
 }
 
 Game.prototype.placeSpot = function(indexNumber) {
@@ -12,15 +12,15 @@ Game.prototype.placeSpot = function(indexNumber) {
 
 Game.prototype.isEndGame = function() {
   if (this.checkWin())  {
-    return true
+    return true;
   } else {
-    return this.numberOfMove >= 8 ? true : false
+    return this.numberOfMove >= 8 ? true : false;
   }
 };
 
 Game.prototype.switchTurn = function () {
   this.currentPlayer === "O" ? this.currentPlayer = "X" : this.currentPlayer = "O";
-}
+};
 
 Game.prototype.checkWin = function() {
   var winPattern = [
@@ -36,7 +36,7 @@ Game.prototype.checkWin = function() {
   for ( var i = 0; winPattern[i]; i++ ) {
     var boardPatter = this.board[winPattern[i][0]] + this.board[winPattern[i][1]] + this.board[winPattern[i][2]];
     if (boardPatter === "OOO" || boardPatter === "XXX") { 
-      return true 
+      return true; 
     }
   }
 };
