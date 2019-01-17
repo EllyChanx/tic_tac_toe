@@ -1,12 +1,12 @@
 # Tic Tac Toe
-https://github.com/makersacademy/course/blob/master/individual_challenges/tic_tac_toe.md 
+https://github.com/makersacademy/course/blob/master/individual_challenges/tic_tac_toe.md  
 This Tic Tac Toe app is build using Javascript, jQuery and strictly followed TDD process during the logic development.
 
 ## Installation
-- Clone the repo and rub `npm install` to install dependencies
+Clone the repo and rub `npm install` to install dependencies
 
 ### Usage
-- Run `open index.html ` to open the app
+Run `open index.html ` to open the app
 ![interface](public/interface.jpg)
 
 ### Testing and Coverage
@@ -27,4 +27,12 @@ testcafe chrome ./spec/features_cafetest.js -e
 To run feature tests in Safari, enter:
 ```
 testcafe safari ./spec/features_cafetest.js -e
+```
+
+### Linting
+All files in `src` are linted using Eslint.  
+To see linting result, enter:
+```
+./node_modules/.bin/eslint src/Game.js
+./node_modules/.bin/eslint src/interface.js
 ```
