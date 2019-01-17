@@ -1,0 +1,95 @@
+html {
+  /*text-align: center;*/
+}
+
+h1 {
+  font-size: 50px;
+  color: grey;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border: 0.1em solid transparent;
+}
+
+h3 {
+  font-size: 20px;
+  color: grey;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  border: 0.1em solid transparent;
+}
+
+#gameboard {
+  padding: 0px;
+  text-align: center;
+}
+
+.board {
+  background-color: #78bec5;
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  border-radius: 14px;
+  transition: background 250ms ease-in-out, 
+            transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mark {
+
+}
+
+.board:disabled {
+  padding: 0px;
+  background: #dddddd;
+}
+
+.board:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+  background: #0053ba;
+}
+
+.board:active {
+  padding: 0px;
+    transform: scale(0.99);
+}
+
+.firstrow {
+  clear: both;
+}
+.secondrow {
+  clear: both;
+}
+.thirdrow {
+  clear: both;
+}
+
+#reStart {
+  clear: both;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  text-align: left;
+  background:transparent;
+  padding:1rem 1rem;
+  margin:10px;
+  transition:all .5s ease;
+  color:#41403E;
+  font-size:20px;
+  letter-spacing:1px;
+  outline:none;
+  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border:dashed 2px #41403E;
+}
+
+#reStart:hover {
+ box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+} 
+
