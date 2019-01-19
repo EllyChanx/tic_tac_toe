@@ -3,7 +3,10 @@ https://github.com/makersacademy/course/blob/master/individual_challenges/tic_ta
 This Tic Tac Toe app is build using Javascript, jQuery and strictly followed TDD process during the logic development.
 
 ## Installation
-Clone the repo and rub `npm install` to install dependencies
+To install dependencies, clone the repo and run: 
+```
+npm install -g node@latest --unsafe-perm
+``` 
 
 ### Usage
 Run `open index.html ` to open the app
@@ -19,8 +22,9 @@ istanbul cover ./node_modules/jasmine/bin/jasmine.js --print detail
 ```
 
 #### Feature Test
-Feature tests were written in TestCafe v0.23.3 for front-end features in .
-To run feature tests in Chrome, enter: 
+Feature tests were written in TestCafe v0.23.3 for front-end features.  
+To run feature test, open the file `feature_cafetest.js` in the spec folder and replace the absolute path to the `index.html` in line 4 after `.page`. Then:
+Run feature tests in Chrome, enter: 
 ```
 testcafe chrome ./spec/features_cafetest.js -e
 ```

@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe'; 
 
 fixture `Getting Started`
-  .page `file:///Users/elly/Desktop/Projects/tic_tac_toe/index.html`;  
+  .page `file:///Users/`/* path to file */`/tic_tac_toe/index.html`;  
 
 test('#first player is O', async t => {
   await t
