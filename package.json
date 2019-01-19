@@ -21,30 +21,20 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "coveralls": "^3.0.2",
-    "eslint": "^5.12.0",
+    "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "grunt": "^1.0.3",
-    "grunt-contrib-jasmine": "^2.0.2",
+    "grunt-contrib-jasmine": "^2.0.3",
     "grunt-coveralls": "^2.0.0",
     "grunt-template-jasmine-istanbul": "^0.5.0",
     "istanbul": "^0.4.5",
     "jasmine": "^3.2.0",
     "jasmine-console-reporter": "^3.1.0",
-    "jasmine-node": "^2.0.1",
     "jasmine-supertest": "^1.0.0",
     "jsdom": "^12.1.0",
     "nyc": "^13.1.0",
-    "supertest": "^3.3.0",
+    "supertest": "^3.4.1",
     "testcafe": "^0.23.3"
-  },
-  "dependencies": {
-    "eslint-plugin-import": "^2.14.0",
-    "grunt": "^1.0.3",
-    "grunt-contrib-jasmine": "^2.0.2",
-    "grunt-template-jasmine-istanbul": "^0.5.0",
-    "istanbul": "^0.4.5",
-    "jquery": "^3.3.1",
-    "request": "^2.88.0"
   }
 }

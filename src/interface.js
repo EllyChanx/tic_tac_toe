@@ -1,7 +1,7 @@
 /* global Game:true */
 /* global game:true */
 
-const Game = require('./Game.js');
+const Game = require("./Game.js");
 
 $(document).ready(function() {
   game = new Game();
